@@ -5,9 +5,24 @@
     xmlns:local="using:Simulator"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d">
+    mc:Ignorable="d" Height="295" Width="794">
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Margin="0,0,0,-133">
+        <ListBox x:Name="moduleSnList" HorizontalAlignment="Left" Height="172" VerticalAlignment="Top" Width="285" Margin="10,54,0,0" Background="#FFFFFDFD">
+            <ListBoxItem Content="MP100AAAA"/>
+            <ListBoxItem Content="MP100AAAB"/>
+            <ListBoxItem Content="MP100AAAC"/>
+            <ListBoxItem Content="MP100AAAD"/>
+        </ListBox>
+        <TimePicker x:Name="StopTime" HorizontalAlignment="Left" Margin="547,54,0,0" VerticalAlignment="Top" Height="60" FontSize="36" Width="226" TimeChanged="StopTime_TimeChanged"/>
+        <CalendarDatePicker x:Name="StopDate" HorizontalAlignment="Left" Margin="547,114,0,0" VerticalAlignment="Top" Height="31" Width="242" Background="{x:Null}" IsTodayHighlighted="False" FontSize="36" DateChanged="StopDate_DateChanged"/>
+        <TimePicker x:Name="StartTime" HorizontalAlignment="Left" VerticalAlignment="Top" Height="60" FontSize="36" Width="226" Margin="300,54,0,0" TimeChanged="StartTime_TimeChanged"/>
+        <CalendarDatePicker x:Name="StartDate" HorizontalAlignment="Left" Margin="300,114,0,0" VerticalAlignment="Top" Height="31" Width="242" Background="{x:Null}" IsTodayHighlighted="False" FontSize="36" DateChanged="StartDate_DateChanged"/>
+        <TextBox TextWrapping="Wrap" Text="Start Date" Margin="300,15,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Height="39" Width="242" FontSize="20" IsReadOnly="True"/>
+        <TextBox TextWrapping="Wrap" Text="Stop Date" Margin="547,15,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Height="39" Width="242" FontSize="20" IsReadOnly="True"/>
+        <Button Content="Push Data" HorizontalAlignment="Left" Margin="300,150,0,0" VerticalAlignment="Top" Height="76" Width="489" Click="Button_Click"/>
+        <TextBox x:Name="statusText" Margin="10,231,10,10" Padding="2" IsReadOnly="True" ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollBarVisibility="Auto" AcceptsReturn="True"/>
+        <TextBox TextWrapping="Wrap" Text="Device SN" Margin="10,15,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Height="39" Width="285" FontSize="20" IsReadOnly="True"/>
 
     </Grid>
 </Page>
